@@ -7,10 +7,7 @@ function findMatching(arr, driver) {
 }
 function fuzzyMatch(arr, driver) {
   return arr.filter(function (mydriver) {
-    return (
-      mydriver.toLowerCase().includes(driver.toLowerCase(), 0) &&
-      !mydriver.toLowerCase().includes(driver.toLowerCase(), 1)
-    );
+    return mydriver.startsWith(driver);
   });
 }
 function matchName(arr, driver) {
